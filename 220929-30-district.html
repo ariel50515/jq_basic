@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <select name="city" id="city">
+            <option value="0">台北</option>
+            <option value="1">新北</option>
+            <option value="2">台中</option>
+        </select>
+        <select name="district" id="district">
+            <option value="0">信義</option>
+            <option value="1">淡水</option>
+            <option value="2">大里</option>
+        </select>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        let districtArray = [
+            ['中正', '大安', '信義'],
+            ['三重', '新店', '板橋'],
+            ['西區', '中區', '北區'],
+        ];
+
+        // 使用者修改城市的下拉式選單，就把區域的選單改成該城市的區域們
+        // 1.使用者改什麼城市？
+        $('#city').change(function () {
+            console.log('city changed', $(this).val);
+            let area = $(districtArray).val;
+        //2.該城市的區域名陣列要如何讀取？
+            const thisCity = $(this).val();
+            const districtArr = districtArray[thisCity];
+            console.log('districtArr', districtArr);
+        // 3.如何修改下拉式選單裡的選項？
+            
+        })
+
+    </script>
+</body>
+
+</html>

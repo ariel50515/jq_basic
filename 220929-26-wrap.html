@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img-wrap {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 10px;
+        }
+
+        .img-wrap>img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <img src="./img/IMG_0110.JPG" alt="">
+            <img src="./img/IMG_0301-2.jpg" alt="">
+            <img src="./img/IMG_1653-2.jpg" alt="">
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        //會自動換行（不常用）
+        $("img").wrap("<div class='img-wrap'></div>");
+
+        // 就是把wrap拿掉
+        // $("img").unwrap();
+        
+        //會把所有的圖片擠在第一個row上面～我全部都要的概念！
+        $("img").wrapAll("<div class='img-wrap'></div>");
+
+        //
+
+    </script>
+
+</body>
+
+</html>

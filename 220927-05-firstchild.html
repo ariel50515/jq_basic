@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+        <div class="box">box6</div>
+        <div class="box">box7</div>
+        <div class="box">box8</div>
+        <div class="box">box9</div>
+        <div class="box">box10</div>
+        <div class="box">box11</div>
+        <div class="box">box12</div>
+    </div>
+    <div class="wrap">
+        <span>span</span>
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+        <div class="box">box6</div>
+        <div class="box">box7</div>
+        <div class="box">box8</div>
+        <div class="box">box9</div>
+        <div class="box">box10</div>
+        <div class="box">box11</div>
+        <div class="box">box12</div>
+    </div>
+
+    <div class="wrpe">
+        <!-- <div class="box"></div> -->
+        <div class="box">box only</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        // $('.box:first-child').css('background', '#aaf')
+        // $('.box:last-child').css('background', '#aff')
+        // $('.box:first-of-type').css('background', '#aff')
+        // $('.box:last-of-type').css('background', '#aff')
+        $('.box:nth-child(2)').css('background', '#aaf')
+        $('.box:nth-last-child(2)').css('background', '#ffa')
+        $('.box:nth-of-type(5)').css('background', '#adf')
+        $('.box:only-child').css('background', '#afa')
+        $('.box:only-of-type').css('background', '#aff')
+    </script>
+</body>
+
+</html>

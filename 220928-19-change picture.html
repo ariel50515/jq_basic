@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+        .dessert {
+            width: 30%;
+            height: 30%;
+        }
+
+        img {
+            width: 30%;
+            height: 30%;
+        }
+
+        ;
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="product-demo d-flex justify-content-center">
+                    <img class="h-100" src="./img/IMG_0110.JPG" alt="">
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="d-flex">
+                    <div class="col">
+                        <div class="img-wrap"><img class="w-100" src="./img/IMG_0110.JPG" alt=""></div>
+                    </div>
+                    <div class="col">
+                        <div class="img-wrap"><img class="w-100" src="./img/IMG_0301-2.jpg" alt=""></div>
+                    </div>
+                    <div class="col">
+                        <div class="img-wrap"><img class="w-100" src="./img/IMG_0284-3.jpg" alt=""></div>
+                    </div>
+                    <div class="col">
+                        <div class="img-wrap"><img class="w-100" src="./img/IMG_1653-2.jpg" alt=""></div>
+                    </div>
+                    <div class="col">
+                        <div class="img-wrap"><img class="w-100" src="./img/kobee_cafe.jpeg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        // $('.img-wrap img').click(function (e) {
+        //     console.log('e.currentTarget:', e.currentTarget);
+        // })
+        //印出點擊對象
+
+        $('.img-wrap img').click(function (e) {
+            console.log('e.currentTarget:', e.currentTarget);
+            $('.product-demo img').attr('src', $(e.currentTarget).attr('src'));
+        })
+        //點擊小圖可以換大圖
+    </script>
+</body>
+
+</html>

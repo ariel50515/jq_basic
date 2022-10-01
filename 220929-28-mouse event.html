@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse event</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #aaf;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        //用於使用者在網頁上的觸發行為研究 ex:為什麼只加購物車不購買
+        $('.box').click(function () {
+            console.log('click');
+        })
+        $('.box').dblclick(function () {
+            console.log('dblclick');
+        })
+        $('.box').contextmenu(function () {
+            console.log('contextmenu');
+        })
+        $('.box').mouseenter(function () {
+            console.log('mouseenter');
+        })
+        $('.box').mousedown(function () {
+            console.log('mousedown');
+        })
+        $('.box').mouseup(function () {
+            console.log('mouseup');
+        })
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            height: 300vh;
+            transition: .5s;
+        }
+
+        .wrap {
+            width: 100%;
+            height: 50px;
+            background-color: #aaf;
+            position: fixed;
+            top: 0;
+        }
+
+        .box {
+            width: 10%;
+            height: 100%;
+            background-color: #faf;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(window).scroll(function () {
+            console.log('scrollTop', $(window).scrollTop());
+            console.log('body height', $('body').height());
+            
+            const scroll = $(window).scrollTop;
+            const bodyHeight = $('body').height();
+            const windowHeight = $(window).height();
+
+            console.log('%', $(window).scrollTop() / ($('body').height() - windowHeight));
+            const percentage = $(window).scrollTop() / ($('body').height() - windowHeight) * 100 + '%';
+            $('.box').css('width', percentage + '%')
+
+
+        })
+    </script>
+</body>
+</html>
