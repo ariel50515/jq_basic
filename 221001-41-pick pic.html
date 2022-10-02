@@ -12,8 +12,14 @@
             height: 200px;
             border-radius: 50%;
         }
+
         .container {
             background-color: rgb(240, 231, 187);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 1200px;
+            height: 250px;
         }
     </style>
 
@@ -21,21 +27,28 @@
 
 <body>
     <div class="container">
-        <div class="div">
-            <img src="./img/1000137.jpg" alt="">
-            <img src="./img/1000138.jpg" alt="">
-            <img src="./img/1000139.jpg" alt="">
-            <img src="./img/1000140.jpg" alt="">
-            <img src="./img/1000141.jpg" alt="">
-        </div>
+        <img src="./img/1000137.jpg" alt="">
+        <img src="./img/1000138.jpg" alt="">
+        <img src="./img/1000139.jpg" alt="">
+        <img src="./img/1000140.jpg" alt="">
+        <img src="./img/1000141.jpg" alt="">
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         //點擊照片添加外框
-         $("img").click (function (){
-            $(this).css("border", "5px solid #a98b73");
-         })
-       
+        $("img").click(function () {
+            $(this).css("border", "6px solid #a98b73");
+        })
+        // 點擊空白處會刷新
+        // $(document).ready(function () {
+        //     $("#container").click(function () {
+        //         $(location).attr("href", location.href);
+        //     })
+        // });
+        $("#container").click(function () {
+            location.reload();
+        });
     </script>
 </body>
 

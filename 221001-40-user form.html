@@ -34,27 +34,26 @@
                 <label for="password">Password</label>
                 <input type="password" value="" class="form-control" id="password">
             </div>
-            <button type="input" class="inputbtn btn-primary">auto input</button> <br>
-            <button type="submit" class="submitbtn btn-primary">Submit</button>
+            <button type="button" class="inputbtn btn-primary">auto input</button> <br>
+            <button type="button" class="submitbtn btn-primary">Submit</button>
         </div>
     </form>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
-        //當使用者點擊auto btn自動帶出預設資訊
-        // $(".button").on({
-        //     click: function () {
-        //         $("#username").val("Joy");
-        //         $("#email").val("joy@gmail.conm");
-        //         $("#password").val("joy0707");
-        //     },
-        // });
+        //當使用者點擊auto btn顯示預設資料 2種方式皆可
         $("button").click(function () {
             $("#username").val("Joy");
             $("#email").val("joy@gmail.conm");
             $("#password").val("joy0707");
         });
-
+        // $("button").on({
+        //     "click": function () {
+        //         $("#username").val("Joy");
+        //         $("#email").val("joy@gmail.conm");
+        //         $("#password").val("joy0707");
+        //     },
+        // });
     </script>
 </body>
 
