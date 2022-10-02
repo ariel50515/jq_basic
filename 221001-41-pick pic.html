@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+        .container {
+            background-color: rgb(240, 231, 187);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="div">
+            <img src="./img/1000137.jpg" alt="">
+            <img src="./img/1000138.jpg" alt="">
+            <img src="./img/1000139.jpg" alt="">
+            <img src="./img/1000140.jpg" alt="">
+            <img src="./img/1000141.jpg" alt="">
+        </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        //點擊照片添加外框
+         $("img").click (function (){
+            $(this).css("border", "5px solid #a98b73");
+         })
+       
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <style>
+            .autobg {
+                width: 200px;
+                height: 100px;
+            }
+        </style>
+    </head>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <table class="table table-bordered">
+                <div class="autobg">box1</div>
+                <div class="autobg">box2</div>
+                <div class="autobg">box3</div>
+                <div class="autobg">box4</div>
+                <div class="autobg">box5</div>
+                <div class="autobg">box6</div>
+                <div class="autobg">box7</div>
+                <div class="autobg">box8</div>
+                <div class="autobg">box9</div>
+                <div class="autobg">box10</div>
+                <div class="autobg">box11</div>
+                <div class="autobg">box12</div>
+                <!-- <tr>
+                    <td class="autobg">box1</td>
+                    <td class="autobg">box2</td>
+                    <td class="autobg">box3</td>
+                    <td class="autobg">box4</td>
+                </tr>
+                <tr>
+                    <td class="autobg">box5</td>
+                    <td class="autobg">box6</td>
+                    <td class="autobg">box7</td>
+                    <td class="autobg">box8</td>
+                </tr>
+                <tr>
+                    <td class="autobg">box9</td>
+                    <td class="autobg">box10</td>
+                    <td class="autobg">box11</td>
+                    <td class="autobg">box12</td>
+                </tr> -->
+            </table>
+        </div>
+    </div>
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>
+ function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max - 50) + 100);
+}
+
+function getRBGA() {
+    return `linear-gradient(135deg, rgba(${getRandomInt(256)},${getRandomInt(256)},${getRandomInt(256)},.5), rgba(${getRandomInt(256)},${getRandomInt(256)},${getRandomInt(256)},.8)`
+}
+
+const elements = document.querySelectorAll('.autobg');
+
+Array.from(elements).forEach((element, index) => {
+    element.style.backgroundImage = getRBGA();
+});
+
+// $('.autobg').each(function (index, currentElement) {
+//     currentElement.style.backgroundImage = getRBGA();
+// });
+</script>
+<script>
+    // 點擊div改變box6之後的顏色
+    $("div:gt(5)").click(function () {
+        $("this").css('background', '#lightblue');
+    })
+</script>
+</html>

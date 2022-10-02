@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ex6</title>
     <style>
         .wrap {
             width: 800px;
-            height: 600px;
+            height: 400px;
             overflow: hidden;
             position: relative;
         }
@@ -24,7 +24,7 @@
         }
 
         .train li img {
-            width: 25%;
+            width: 100%;
             object-fit: cover;
         }
 
@@ -55,12 +55,11 @@
 <body>
     <div class="wrap">
         <ul class="train">
-            <li><img src="./img/1.JPG" alt="">
-                <img src="./img/2.jpg" alt="">
-                <img src="./img/3.jpg" alt="">
-                <img src="./img/4.jpg" alt="">
-                <img src="./img/5.jpg" alt="">
-            </li>
+            <li><img src="./img/1.JPG" alt=""></li>
+            <li><img src="./img/2.JPG" alt=""></li>
+            <li><img src="./img/3.JPG" alt=""></li>
+            <li><img src="./img/4.JPG" alt=""></li>
+            <li><img src="./img/5.JPG" alt=""></li>
         </ul>
 
         <ul class="slider-dots">
@@ -73,29 +72,38 @@
             <li></li>
         </ul>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script>
-        $('.slider-dots li').click(function (e) {
+        $('.slider-dots li').click(function () {
             console.log('li clicked', $(this).index());
-            
+
             const index = $(this).index();
             const moveX = index * -800;
 
-            $('.train').css('transform', `traslateX${moveX}`);
-            $(this).css('backgrond', '#fff').siblings().css("background", "transparent");
+            $('.train').css('transform', `translateX(${moveX}px)`);
 
+            $(this).css('background', '#fff').siblings().css("background", "transparent");
+
+            // // 如果(index=0)
             // if (index === 0) {
+            //     // 移動到第一頁
             //     $('.train').css('transform', 'translateX(0px)')
-            // } else if (index === 1) {
+            // }
+            // else if (index === 1) {
+            //     // 移動到第二頁(index=1)
             //     $('.train').css('transform', 'translateX(-800px)')
             // }
+            // // 移動到第三頁
             // $('.train').css('transform', 'translateX(-1600px)')
+            // // 移動到第四頁
             // $('.train').css('transform', 'translateX(-2400px)')
+            // // 移動到第五頁
             // $('.train').css('transform', 'translateX(-3200px)')
         })
-    </script>
 
+    </script>
 </body>
 
 </html>

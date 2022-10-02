@@ -35,17 +35,25 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         $(window).scroll(function () {
+            // 分母、分子，計算閱讀百分比 %
             console.log('scrollTop', $(window).scrollTop());
             console.log('body height', $('body').height());
             
-            const scroll = $(window).scrollTop;
+            const scrollTop = $(window).scrollTop();
             const bodyHeight = $('body').height();
             const windowHeight = $(window).height();
 
             console.log('%', $(window).scrollTop() / ($('body').height() - windowHeight));
-            const percentage = $(window).scrollTop() / ($('body').height() - windowHeight) * 100 + '%';
+            const percentage = $(window).scrollTop() / ($('body').height() - windowHeight) * 100;
+
             $('.box').css('width', percentage + '%')
 
+            if (percentage > 50) {
+                $('body').css('background', '#faa');
+            }
+            else {
+                $('body').css('background', 'transparent');
+            }
 
         })
     </script>

@@ -30,15 +30,28 @@
         $('.box').contextmenu(function () {
             console.log('contextmenu');
         })
-        $('.box').mouseenter(function () {
-            console.log('mouseenter');
-        })
         $('.box').mousedown(function () {
             console.log('mousedown');
         })
         $('.box').mouseup(function () {
             console.log('mouseup');
         })
+        $('.box').mouseenter(function () {
+            console.log('mouseenter');
+        })
+        $('.box').mouseleave(function () {
+            console.log('mouseleave');
+        })
+        $('.box').mouseout(function () {
+            console.log('mouseout');
+        })
+        $('.box').hover(function () {
+            console.log('hover');
+        }, function () {
+            //偵測滑出
+            console.log('hover out');
+        }
+        )
 
 
     </script>
