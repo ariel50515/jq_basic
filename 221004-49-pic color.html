@@ -13,7 +13,7 @@
         .color-select-area {
             /* height: 480px; */
             aspect-ratio: 1/1;
-            background-color: #ccc;
+            background-color: rgb(228, 194, 244);
         }
 
         .color-selector {
@@ -32,7 +32,7 @@
             </div>
             <div class="col-6">
                 <div class="color-select-area d-flex flex-wrap">
-                    <div class="col-6 col-md-4 col-lg-3">
+                    <!-- <div class="col-6 col-md-4 col-lg-3">
                         <div class="color-selector autobg"></div>
                     </div>
                     <div class="col-6 col-md-4 col-lg-3">
@@ -43,7 +43,7 @@
                     </div>
                     <div class="col-6 col-md-4 col-lg-3">
                         <div class="color-selector autobg"></div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -56,19 +56,41 @@
         }
 
         function getRBGA() {
-            return `rgba(${getRandomInt(256)},${getRandomInt(256)},${getRandomInt(256)},.5)`
+            return `linear-gradient(135deg, rgba(${getRandomInt(256)},${getRandomInt(256)},${getRandomInt(256)},.5), rgba(${getRandomInt(256)},${getRandomInt(256)},${getRandomInt(256)},.8)`
         }
 
-        const elements = document.querySelectorAll('.autobg');
 
-        Array.from(elements).forEach((element, index) => {
-            element.style.background = getRBGA();
-        });
 
     // $('.autobg').each(function (index, currentElement) {
     //     currentElement.style.backgroundImage = getRBGA();
     // });
     </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+
+
+        for (let i = 0; i < 8; i++) {
+            $('.color-select-area').append(`<div class="col-6 col-md-4 col-lg-3">
+                        <div class="color-selector autobg"></div>
+                    </div>`)
+        }
+
+        const elements = document.querySelectorAll('.autobg');
+
+        Array.from(elements).forEach((element, index) => {
+            element.style.backgroundImage = getRBGA();
+        });
+
+        $('.color-select-area').on('click', '.color-selector', function () {
+            console.log('this', $(this).css('background-image'));
+            const backgroundImg = $(this).css('background-image');
+            $('.color-demo-area').css('background-image', backgroundImg);
+        })
+
+    </script>
+
 </body>
 
 </html>
