@@ -21,41 +21,20 @@
 <body>
     <div class="container">
         <div class="row">
-            <table class="table table-bordered">
-                <div class="autobg">box1</div>
-                <div class="autobg">box2</div>
-                <div class="autobg">box3</div>
-                <div class="autobg">box4</div>
-                <div class="autobg">box5</div>
-                <div class="autobg">box6</div>
-                <div class="autobg">box7</div>
-                <div class="autobg">box8</div>
-                <div class="autobg">box9</div>
-                <div class="autobg">box10</div>
-                <div class="autobg">box11</div>
-                <div class="autobg">box12</div>
-                <!-- <tr>
-                    <td class="autobg">box1</td>
-                    <td class="autobg">box2</td>
-                    <td class="autobg">box3</td>
-                    <td class="autobg">box4</td>
-                </tr>
-                <tr>
-                    <td class="autobg">box5</td>
-                    <td class="autobg">box6</td>
-                    <td class="autobg">box7</td>
-                    <td class="autobg">box8</td>
-                </tr>
-                <tr>
-                    <td class="autobg">box9</td>
-                    <td class="autobg">box10</td>
-                    <td class="autobg">box11</td>
-                    <td class="autobg">box12</td>
-                </tr> -->
-            </table>
+            <div class="col-12 col-md-3 box1 autobg">box1</div>
+            <div class="col-12 col-md-3 box2 autobg">box2</div>
+            <div class="col-12 col-md-3 box3 autobg">box3</div>
+            <div class="col-12 col-md-3 box4 autobg">box4</div>
+            <div class="col-12 col-md-3 box5 autobg">box5</div>
+            <div class="col-12 col-md-3 box6 autobg">box6</div>
+            <div class="col-12 col-md-3 box7 autobg">box7</div>
+            <div class="col-12 col-md-3 box8 autobg">box8</div>
+            <div class="col-12 col-md-3 box9 autobg">box9</div>
+            <div class="col-12 col-md-3 box10 autobg">box10</div>
+            <div class="col-12 col-md-3 box11 autobg">box11</div>
+            <div class="col-12 col-md-3 box12 autobg">box12</div>
         </div>
     </div>
-    
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script>
@@ -79,8 +58,10 @@ Array.from(elements).forEach((element, index) => {
 </script>
 <script>
     // 點擊div改變box6之後的顏色
-    $("div:gt(5)").click(function () {
-        $("this").css('background', '#lightblue');
-    })
+    // $(".container").click(function () {
+    // console.log("this", $(this).text().replace("box",""));
+    // $("div:gt(5)").click(function () {
+    //     $("this").css('background', '#lightblue');
+    // })
 </script>
 </html>

@@ -19,34 +19,44 @@
 </head>
 
 <body>
-    <form>
-        <div class="container">
-            <div class="form-group">
-                <label for="username">username</label>
-                <input type="text" value="" class="form-control" id="username">
-                <small id="emailHelp" class="form-text text-muted"></small>
-            </div>
-            <div class="form-group">
-                <label for="email">Email address</label>
-                <input type="text" value="" class="form-control" id="email">
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" value="" class="form-control" id="password">
-            </div>
-            <button type="button" class="inputbtn btn-primary">auto input</button> <br>
-            <button type="button" class="submitbtn btn-primary">Submit</button>
+
+    <div class="container">
+        <div class="row">
+            <form>
+                <div class="form-group">
+                    <label for="username">username</label>
+                    <input type="text" value="" class="form-control" id="username">
+                    <small id="emailHelp" class="form-text text-muted"></small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="text" value="" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" value="" class="form-control" id="password">
+                </div>
+                <button type="button" id="autoinputBtn" class="inputbtn btn-primary">auto input</button>
+                <button type="button" id="showpassBtn" class="inputbtn btn-primary">password</button>
+                <button type="submit" id="submitBtn" class="submitbtn btn-primary">Submit</button>
+            </form>
         </div>
-    </form>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         //當使用者點擊auto btn顯示預設資料 2種方式皆可
-        $("button").click(function () {
+        $("#autoinputBtn").click(function () {
             $("#username").val("Joy");
             $("#email").val("joy@gmail.conm");
             $("#password").val("joy0707");
         });
+        $("#showpassBtn").click(function () {
+            console.log("showpassBtn");
+            $("#password").attr("type", "text")
+        })
+
         // $("button").on({
         //     "click": function () {
         //         $("#username").val("Joy");

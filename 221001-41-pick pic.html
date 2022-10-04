@@ -20,9 +20,9 @@
             align-items: center;
             width: 1200px;
             height: 250px;
+            border:6px solid transparent;
         }
     </style>
-
 </head>
 
 <body>
@@ -37,18 +37,21 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         //點擊照片添加外框
+        // $('body').click(function () {
+        //     $('.container').click(function () {
+        //     $().css("border", "6px solid #a98b73");
+        // });
+        // });
+
         $("img").click(function () {
-            $(this).css("border", "6px solid #a98b73");
+            $(this).css("border", "6px solid #a98b73").parent().siblings().find().css("border", "6px solid transparent")
         })
-        // 點擊空白處會刷新
+        
         // $(document).ready(function () {
         //     $("#container").click(function () {
         //         $(location).attr("href", location.href);
         //     })
         // });
-        $("#container").click(function () {
-            location.reload();
-        });
     </script>
 </body>
 
