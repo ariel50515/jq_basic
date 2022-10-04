@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #aaf;
+            transition: .5s;
+        }
+
+        .box.active {
+            background-color: rgb(246, 196, 246);
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="btnAdd">add</button>
+    <button type="button" id="btnRemove">remove</button>
+    <button type="button" id="btnToggle">toggle</button>
+    <button type="button" id="btnHas">has</button>
+    <br>
+    <div class="box"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $("#btnAdd").click(function() {
+            $(".box").addClass("active")
+        })
+        $("#btnRemove").click(function() {
+            $(".box").removeClass("active")
+        })
+        $("#btnToggle").click(function() {
+            $(".box").toggleClass("active")
+        })
+
+        $("#btnHas").click(function() {
+            console.log("btnHas clicked", $(".box").hasClass("active"));
+            if($(".box").hasClass("active")){
+                $(".box").removeClass("active")
+            }
+            else {
+                $(".box").addClass("active")
+            }
+        })
+
+    </script>
+</body>
+</html>
